@@ -22,13 +22,22 @@
                     <div class="card__top">
                         <p class="card__title"><span class="card__views"></span> Pageviews</p>
                         <div class="card__range-container">
-                            <input class="card__range" type="range" name="billing" id="billRange" min="5" max="100" value="52" />
+                            <input
+                                class="card__range"
+                                type="range"
+                                name="billing"
+                                id="billRange"
+                                min="5"
+                                max="100"
+                                value="52"
+                                aria-label="pricing input range"
+                            />
                         </div>
                         <div class="card__price"><span id="price"></span><span id="time">/ month</span></div>
                         <div class="pricing">
                             <p class="pricing__monthly">Monthly Billing</p>
                             <label class="pricing__label" for="billing">
-                                <input class="pricing__input" id="billing" type="checkbox" />
+                                <input class="pricing__input" id="billing" type="checkbox" aria-label="billing checkbox" />
                                 <span class="pricing__toggle"></span>
                             </label>
                             <p class="pricing__yearly">Yearly Billing <span class="pricing__discount"></span></p>

@@ -17,7 +17,7 @@
                 <p class="heading__subtext">No credit card required.</p>
                 <img class="heading__img" src="/src/assets/images/pattern-circles.svg" alt="circles" />
             </div>
-            <div class="card bounce--in">
+            <form class="card bounce--in" id="formComp" action="submit" aria-label="pricing component">
                 <div class="card__body">
                     <div class="card__top">
                         <p class="card__title"><span class="card__views"></span> Pageviews</p>
@@ -34,7 +34,7 @@
                             <p class="pricing__yearly">Yearly Billing <span class="pricing__discount"></span></p>
                         </div>
                     </div>
-                    <form class="card__bottom">
+                    <div class="card__bottom">
                         <div class="card__benefits">
                             <p>
                                 <span>
@@ -62,10 +62,10 @@
                             </p>
                         </div>
 
-                        <button class="card__button" id="cardButotn" type="button">Start my trial</button>
-                    </form>
+                        <button class="card__button" id="cardButotn" type="submit">Start my trial</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </main>
 
         <!-- 

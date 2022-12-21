@@ -3,6 +3,7 @@ const price = document.querySelector("#price");
 const checkBox = document.querySelector("#billing");
 const views = document.querySelector(".card__views");
 const yearlyBill = document.querySelector("#time");
+const form = document.querySelector("#formComp");
 
 // preload design
 window.addEventListener("load", (event) => {
@@ -39,5 +40,10 @@ function checkboxChange() {
     }
 }
 
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // inputRangeValue();
+    console.log(price.innerHTML);
+});
 inputRange.addEventListener("input", inputRangeValue);
 checkBox.addEventListener("change", checkboxChange);

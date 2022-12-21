@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <link rel="stylesheet" href="/src/assets/styles/main.css" />
+        <title>Interactive pricing component</title>
+    </head>
+    <body>
+        <main>
+            <div class="heading fade--in">
+                <h1 class="heading__text">Simple, traffic-based pricing</h1>
+                <p class="heading__subtext">Sign-up for our 30-day trial.</p>
+                <p class="heading__subtext">No credit card required.</p>
+                <img class="heading__img" src="/src/assets/images/pattern-circles.svg" alt="circles" />
+            </div>
+            <div class="card bounce--in">
+                <div class="card__body">
+                    <div class="card__top">
+                        <p class="card__title"><span class="card__views"></span> Pageviews</p>
+                        <div class="card__range-container">
+                            <input class="card__range" type="range" name="billing" id="billRange" min="5" max="100" value="52" />
+                        </div>
+                        <div class="card__price"><span id="price"></span><span id="time">/ month</span></div>
+                        <div class="pricing">
+                            <p class="pricing__monthly">Monthly Billing</p>
+                            <label class="pricing__label" for="billing">
+                                <input class="pricing__input" id="billing" type="checkbox" />
+                                <span class="pricing__toggle"></span>
+                            </label>
+                            <p class="pricing__yearly">Yearly Billing <span class="pricing__discount"></span></p>
+                        </div>
+                    </div>
+                    <form class="card__bottom">
+                        <div class="card__benefits">
+                            <p>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                                        <path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1" />
+                                    </svg>
+                                </span>
+                                Unlimited websites
+                            </p>
+                            <p>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                                        <path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1" />
+                                    </svg>
+                                </span>
+                                100% data ownership
+                            </p>
+                            <p>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                                        <path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1" />
+                                    </svg>
+                                </span>
+                                Email reports
+                            </p>
+                        </div>
+
+                        <button class="card__button" id="cardButotn" type="button">Start my trial</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- 
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+            <a href="#">Your Name Here</a>.
+        </div> -->
+        <script src="/src/assets/scripts/index.js"></script>
+    </body>
+</html>

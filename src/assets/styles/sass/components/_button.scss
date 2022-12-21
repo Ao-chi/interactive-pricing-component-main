@@ -1,0 +1,27 @@
+.card {
+    &__button {
+        position: relative;
+        color: $pale-blue;
+        font-weight: font-weight(font-bold);
+        @include Manrope-font;
+        background: $dark-blue;
+        border: 1px solid $dark-blue;
+        border-radius: $p-1_5;
+        padding: 0.675rem 2.5rem;
+        margin-bottom: $p-1;
+        cursor: pointer;
+
+        &:hover {
+            color: $white;
+            transform: scale(1.02);
+            -webkit-transform: scale(1.1);
+        }
+
+        @include breakpoint(md, min) {
+            margin-right: $p-1;
+        }
+    }
+}
+
+@keyframes fadeIn {
+}

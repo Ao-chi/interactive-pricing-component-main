@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.4;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: ease-in-out 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.55;
+}
+
+p {
+  color: hsl(225deg, 20%, 60%);
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 0.675rem;
+  line-height: 1.7;
+}
+
+a {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 300;
+}
+
+h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 3.125rem;
+}
+
+h2 {
+  color: hsl(0deg, 0%, 10%);
+  font-size: 2.5rem;
+}
+
+.card__button {
+  position: relative;
+  color: hsl(226deg, 100%, 87%);
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+  background: hsl(227deg, 35%, 25%);
+  border: 1px solid hsl(227deg, 35%, 25%);
+  border-radius: 1.5rem;
+  padding: 0.675rem 2.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.card__button:hover {
+  color: hsl(0deg, 0%, 100%);
+  transform: scale(1.02);
+  -webkit-transform: scale(1.1);
+}
+@media (min-width: 992px) {
+  .card__button {
+    margin-right: 1rem;
+  }
+}
+
+@-webkit-keyframes fadeIn {}
+
+@keyframes fadeIn {}
+body {
+  display: grid;
+  place-items: center;
+  background-color: hsl(230deg, 100%, 99%);
+  background: url("/src/assets/images/bg-pattern.svg") no-repeat;
+  background-size: 100% 50%;
+  background-position: top;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  main {
+    gap: 1rem;
+  }
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading.fade--in {
+  opacity: 1;
+  -webkit-animation: fadeIn 0.5s ease-in 0.4s 1;
+          animation: fadeIn 0.5s ease-in 0.4s 1;
+}
+.heading__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 34%;
+  transform: translateX(-10%);
+  z-index: -1;
+}
+.heading__text {
+  color: hsl(227deg, 35%, 25%);
+  font-size: 22px;
+  padding-top: 1.5rem;
+  z-index: 1;
+}
+.heading__subtext {
+  margin-bottom: 0;
+  z-index: 1;
+}
+@media (min-width: 992px) {
+  .heading__text {
+    font-size: 32px;
+    padding-top: 0;
+  }
+  .heading__subtext {
+    display: inline-block;
+  }
+  .heading__img {
+    top: -40px;
+    transform: scale(1.1);
+  }
+}
+
+.card {
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  min-width: 350px;
+  box-shadow: 0px 0px 36px -13px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0px 0px 36px -13px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 0px 36px -13px rgba(0, 0, 0, 0.29);
+}
+.card.bounce--in {
+  opacity: 1;
+  -webkit-animation: bounce 1s ease-in-out 0.4s 1;
+          animation: bounce 1s ease-in-out 0.4s 1;
+}
+.card__top {
+  padding: 1.5rem;
+}
+.card__title {
+  padding-top: 1rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.card__range {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  margin: 2em 0;
+  background: hsl(224deg, 65%, 95%);
+  border-radius: 10px;
+}
+.card__range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.card__range::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: grab;
+}
+.card__range::-ms-track {
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+  cursor: grab;
+}
+.card__range::-webkit-slider-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url("/src/assets/images/icon-slider.svg") center center no-repeat;
+  background-color: hsl(174deg, 86%, 45%);
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -10px;
+  box-shadow: 1px 3px 16px 0px rgba(16, 213, 194, 0.71);
+  -webkit-box-shadow: 1px 3px 16px 0px rgba(16, 213, 194, 0.71);
+  -moz-box-shadow: 1px 3px 16px 0px rgba(16, 213, 194, 0.71);
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.card__range::-webkit-slider-thumb:hover {
+  background-color: #0ca697;
+  transform: scale(1.19);
+}
+.card__range::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: grab;
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem 0;
+}
+.card__price #price {
+  font-size: 36px;
+  font-weight: 800;
+  color: hsl(227deg, 35%, 25%);
+}
+.card__price #time {
+  color: hsl(225deg, 20%, 60%);
+}
+.card__bottom {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1.5px solid hsl(224deg, 65%, 95%);
+}
+.card__benefits {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+.card__benefits span {
+  margin-right: 1rem;
+}
+.card__benefits span svg {
+  transform: scale(1.4);
+}
+@media (min-width: 992px) {
+  .card {
+    min-width: 600px;
+  }
+  .card__top {
+    padding: 1.5rem 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "views price " "range range" "billing billing";
+  }
+  .card__title {
+    grid-area: views;
+    align-self: center;
+  }
+  .card__range-container {
+    grid-area: range;
+  }
+  .card__price {
+    grid-area: price;
+  }
+  .card .pricing {
+    grid-area: billing;
+    padding: 3rem 0.5rem 1.5rem 0;
+  }
+  .card__bottom {
+    padding: 1.5rem 2.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card__benefits {
+    padding: 0.5rem;
+  }
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 1rem 0;
+  gap: 8px;
+  margin-right: -1rem;
+}
+.pricing__label {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+}
+.pricing__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.pricing__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(223deg, 50%, 87%);
+  transition: 0.4s;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.pricing__toggle::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 1rem;
+}
+input:checked + .pricing__toggle {
+  background-color: hsl(174deg, 86%, 45%);
+}
+input:checked + .pricing__toggle::before {
+  transform: translateX(24px);
+}
+.pricing__monthly, .pricing__yearly {
+  margin-bottom: 0;
+}
+.pricing__discount {
+  padding: 3px 8px;
+  background: hsl(14deg, 92%, 95%);
+  border-radius: 20px;
+}
+.pricing__discount::after {
+  content: "-25%";
+  color: hsl(15deg, 100%, 70%);
+  font-size: 12px;
+  font-weight: 800;
+}
+@media (min-width: 992px) {
+  .pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: -6rem;
+  }
+  .pricing__discount::after {
+    content: "-25% discount";
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=main.css.map */

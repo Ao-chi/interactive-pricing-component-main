@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    @include Manrope-font;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    transition: ease-in-out 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: font-weight(font-bolder);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+}
+
+p {
+    color: $grayish-blue;
+    font-size: font-size(fs-15);
+    font-weight: font-weight(font-normal);
+    margin-bottom: 0.675rem;
+    line-height: 1.7;
+}
+
+a {
+    color: $white;
+    font-weight: font-weight(font-normal);
+}
+
+h1 {
+    color: $white;
+    font-size: $h1-font-size;
+}
+
+h2 {
+    color: $black;
+    font-size: $h2-font-size;
+}
